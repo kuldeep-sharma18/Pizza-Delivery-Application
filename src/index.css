@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+}
+
+@layer components {
+  /* Pizza Builder Styles */
+  .pizza-builder {
+    @apply min-h-screen bg-gradient-to-br from-orange-50 to-red-50;
+  }
+
+  .config-section {
+    @apply bg-white rounded-2xl shadow-lg p-6 mb-6;
+  }
+
+  .option-button {
+    @apply p-4 rounded-xl border-2 transition-all duration-200 hover:shadow-lg;
+  }
+
+  .option-button.selected {
+    @apply bg-orange-500 text-white border-orange-500 shadow-orange-200;
+  }
+
+  .option-button.unselected {
+    @apply bg-gray-100 border-gray-200 hover:bg-gray-200;
+  }
+
+  /* Order Summary Card */
+  .order-summary {
+    @apply bg-white rounded-3xl shadow-2xl p-8 sticky top-12;
+  }
+
+  /* Form Styles */
+  .form-container {
+    @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-red-50 py-12 px-4;
+  }
+
+  .form-card {
+    @apply bg-white p-8 rounded-2xl shadow-xl;
+  }
+
+  .form-input {
+    @apply mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-orange-500 focus:border-orange-500 transition-colors;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .btn-primary {
+    @apply w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 rounded-xl font-medium transition-colors duration-200;
+  }
+
+  /* Dashboard Styles */
+  .dashboard-container {
+    @apply min-h-screen bg-gradient-to-br from-orange-50 to-red-50 py-12;
+  }
+
+  .dashboard-card {
+    @apply bg-white rounded-2xl shadow-lg p-8;
+  }
+
+  .status-badge {
+    @apply px-4 py-2 rounded-full text-sm font-semibold;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply font-medium text-orange-600 hover:text-orange-800 transition-colors;
+  }
+
+  /* Toast Notifications */
+  .toast-success {
+    @apply bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg;
+  }
+
+  .toast-error {
+    @apply bg-red-500 text-white px-6 py-3 rounded-xl shadow-lg;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+/* Pizza Palace - Custom App Styles */
+
+/* App Container */
+.App {
+  text-align: center;
+}
+
+/* Logo Animation */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Keyframe Animations */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pizza Palace Custom Styles */
+.pizza-palace-theme {
+  --primary-orange: #f97316;
+  --primary-red: #ef4444;
+  --light-orange: #fff7ed;
+  --light-red: #fef2f2;
+}
+
+/* Gradient Backgrounds */
+.bg-pizza-gradient {
+  background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%);
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.btn-pizza {
+  background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-pizza:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+/* Input Focus Styles */
+.input-pizza:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+/* Status Colors */
+.status-confirmed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-kitchen {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.status-delivering {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.status-delivered {
+  background-color: #f3e8ff;
+  color: #7c3aed;
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #f97316;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toast Customization */
+.toast-container {
+  font-family: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pizza-builder-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .order-summary {
+    position: relative;
+    top: 0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: rgba(249, 115, 22, 0.2);
+  color: inherit;
+}
+
+/* Focus Visible Styles */
+:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
